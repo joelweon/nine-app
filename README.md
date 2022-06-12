@@ -1,5 +1,7 @@
 # NineApp
 
+![nine_app.png](nine_app.png)
+
 ## 테스트 환경 세팅
 
 ### 1. [Node.js 설치](https://nodejs.org/en/download/)
@@ -21,7 +23,7 @@ Angular 13.3.7 기준으로 필요한 "node" 버전은 아래중에 선택하면
 - URL 접속 `http://localhost:4200/`
 
 ## Angular version
-- 13.3.7.
+- 13.3.11
 
 ## 폴더 구조
     .
@@ -31,8 +33,8 @@ Angular 13.3.7 기준으로 필요한 "node" 버전은 아래중에 선택하면
     │   │    ├── contents        # 본문 내용
     │   │    │      └── main     # 메인 페이지 본문
     │   │    ├── footer          # 푸터
-    │   │    ├── app*.*          # 기본 메인 파일 (앱 최상위 컴포넌트)
-    │   │    └── header          # 헤더
+    │   │    ├── header          # 헤더
+    │   │    └── app*.*          # 기본 메인 파일 (앱 최상위 컴포넌트)
     │   ├── assets               # 이미지 파일이나 리소스 파일
     │   ├── environments         # 환경에 맞게 적용될 빌드 환경설정 옵션 (개발/운영)
     │   └── ...
