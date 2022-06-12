@@ -1,0 +1,361 @@
+/*헤더 메인*/
+#header {
+  position: relative;
+}
+
+.logo {
+  margin-left: 8px;
+}
+
+.top-banner {
+  width: 100%;
+  height: 90px;
+  margin-bottom: 8px;
+}
+
+
+/*헤더 고정일 때*/
+.header-box.fixed {
+  position: fixed;
+  background-color: white;
+  z-index: 10;
+  top: 0;
+  width: 100%;
+  height: 98px;
+  flex-direction: row;
+  border-bottom: 1px solid #dfdfdf;
+  justify-content: center;
+}
+
+.header-box.fixed .top-banner, .header-box.fixed .logo, .header-box.fixed .hdSchWr {
+  display: none;
+}
+
+.header-box.fixed div > .flex, .header-box.fixed > div, .header-box.fixed .fix-logo {
+  display: inline;
+}
+
+
+.header-box.fixed .layout-width {
+  width: auto;
+}
+
+.header-box.fixed .main-member {
+  position: absolute;
+  top: 30px;
+  right: 10%;
+}
+
+.header-box.fixed #gnb {
+  margin-left: 8px;
+  width: 1200px;
+}
+
+.header-box.fixed #gnb .ml-auto {
+  margin-left: 0;
+}
+
+.first-header {
+  margin: 8px 0;
+  justify-content: space-between;
+  gap: 48px;
+}
+
+
+/*검색바*/
+.hdSchWr {
+  border: 2px solid transparent;
+  border-radius: 40px;
+  width: 400px;
+  transition: all 0.5s ease-in;
+  margin-left: 32px;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+.hdSchWr.active {
+  width: 650px;
+}
+
+.border-gradient {
+  background: linear-gradient(to right, white, white), linear-gradient(135deg, #9c57f5, #9babff);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}
+
+.hdSchWr .searchBtn {
+  background: none;
+}
+
+.hdSchWr .searchImg {
+  width: 30px;
+  height: 30px;
+  vertical-align: bottom;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+.search-tit {
+  display: inline-block;
+  padding: 0 16px;
+  width: 52px;
+}
+
+.search-input {
+  width: 80%;
+  height: 35px;
+  margin-right: auto;
+}
+
+.search-input:focus::placeholder {
+  color: #9c57f5;
+  font-weight: 500;
+}
+
+/*우측 회원 관리*/
+.main-member {
+  font-weight: 500;
+  text-align: center;
+}
+
+.main-member ul {
+  display: inline-block;
+  padding-left: 24px;
+}
+
+.main-member a {
+  color: #919191;
+  text-decoration: none;
+}
+
+.main-member a:hover {
+  color: #9c57f5;
+}
+
+.menu-icon {
+  height: 30px;
+  display: block;
+}
+
+.main-member .sign-up .menu-icon {
+  height: 28px;
+  background: url(src/assets/images/common/header/member.png) no-repeat center 3px;
+}
+
+.main-member .sign-up:hover .menu-icon {
+  background: url(src/assets/images/common/header/member_ov.png) no-repeat center 3px;
+}
+
+.main-member .sign-in .menu-icon {
+  background: url(src/assets/images/common/header/login.png) no-repeat center 3px;
+}
+
+.main-member .sign-in:hover .menu-icon {
+  background: url(src/assets/images/common/header/login_ov.png) no-repeat center 3px;
+}
+
+.main-member .company-svc .menu-icon {
+  background: url(src/assets/images/common/header/company.png) no-repeat center 3px;
+}
+
+.main-member .company-svc:hover .menu-icon {
+  background: url(src/assets/images/common/header/company_ov.png) no-repeat center 3px;
+}
+
+
+/*메뉴바*/
+.menu-btn {
+  padding: 0;
+}
+
+.menu-bar {
+  width: 55px;
+  height: 55px;
+}
+
+#gnb > nav > ul {
+  gap: 24px;
+}
+
+#gnb > nav a {
+  font-weight: 500;
+  font-size: 16px;
+  font-family: 'Noto Sans KR', 'malgun gothic', 'dotum', sans-serif;
+  color: #333;
+}
+
+#gnb li a:hover {
+  color: #9c57f5;
+}
+
+#gnb li:nth-child(5), #gnb li:nth-child(6) {
+  width: 60px;
+}
+
+#gnb li:nth-child(5) a:hover {
+  font-size: 0;
+  width: 72px;
+  height: 28px;
+  background: url(src/assets/images/common/header/jn-info.png) no-repeat;
+  background-size: 72px;
+}
+
+#gnb li:nth-child(6) a:hover {
+  font-size: 0;
+  width: 64px;
+  height: 32px;
+  background: url(src/assets/images/common/header/jn-talk.png) no-repeat;
+}
+
+#gnb li > a {
+  display: block;
+}
+
+#gnb li > ul > li:nth-child(1) a {
+  width: 100px;
+  height: 40px;
+  background: url(src/assets/images/common/header/aca.png) no-repeat 0 bottom;
+}
+
+#gnb li > ul > li:nth-child(2) a {
+  width: 70px;
+  height: 40px;
+  background: url(src/assets/images/common/header/community.png) no-repeat 0 bottom;
+}
+
+#gnb li > ul > li:nth-child(3) a {
+  width: 80px;
+  height: 40px;
+  background: url(src/assets/images/common/header/ai.png) no-repeat 0 bottom;
+  background-size: 62px;
+}
+
+#gnb li > ul > li:nth-child(3) a:hover {
+  font-size: 0;
+  width: 80px;
+  height: 40px;
+  background: url(src/assets/images/common/header/ai_ov.png) no-repeat;
+  background-size: 74px;
+}
+
+.right-menu {
+  align-items: flex-start;
+  gap: 28px;
+  height: 56px;
+}
+
+
+/*fixed 일 때 검색바*/
+#fixed-search {
+  display: none;
+}
+
+.header-box.fixed #fixed-search {
+  display: inline;
+  position: absolute;
+  bottom: -24px;
+  right: 14%;
+}
+
+.header-box.fixed #fixed-search > .hd-sub-sch {
+  display: block;
+  padding: 3px;
+  border-radius: 22px;
+  border: 2px solid transparent;
+  background: linear-gradient(to right, white, white), linear-gradient(135deg, #add0ff, #bc8ff0);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  z-index: 10;
+  width: 32px;
+  transition: all 0.5s;
+}
+
+.header-box.fixed #fixed-search > .hd-sub-sch:hover {
+  width: 220px;
+}
+
+.header-box.fixed #fixed-search > .hd-sub-sch:hover .sch-stx {
+  width: 90%;
+  padding-left: 8px;
+}
+
+.header-box.fixed #fixed-search > .hd-sub-sch .sch-stx {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
+
+.header-box.fixed #fixed-search .search-btn {
+  position: absolute;
+  right: 3px;
+  bottom: 2px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  color: #fff;
+  background: url(src/assets/images/common/header/mainSrchBtn.png) no-repeat center center;
+  background-size: 36px;
+}
+
+
+/*메뉴 오픈*/
+#gnb-menu.fixed {
+  position: fixed;
+}
+
+#gnb-menu {
+  position: absolute;
+  width: 100%;
+  background: #fff;
+  border-bottom: 1px solid #dfdfdf;
+  z-index: 5;
+  overflow: hidden;
+}
+
+#gnb-menu a {
+  color: #4a4a4a;
+}
+
+#gnb-menu > ul {
+  display: flex;
+  width: 1250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#gnb-menu > ul > li {
+  flex: 1;
+  padding: 30px 29px;
+  align-items: flex-start;
+  border-right: 1px solid #efefef;
+}
+
+#gnb-menu > ul > li:first-child {
+  border-left: 1px solid #efefef;
+}
+
+#gnb-menu .gnb-title > a {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#gnb-menu li > a:hover {
+  color: #9c57f5;
+}
+
+#gnb-menu > ul > li > ul > li {
+  padding-bottom: 16px;
+  line-height: 1.3;
+  font-size: 13px;
+}
+
+#gnb-menu > ul > li > ul > li:first-child {
+  padding-top: 0;
+}
+
+#gnb-menu .gnb-sub {
+  padding-top: 16px;
+}

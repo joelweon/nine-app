@@ -1,0 +1,381 @@
+.content-top {
+  background: linear-gradient(to right, rgba(173, 207, 255, 0.25) 0%, rgba(173, 206, 255, 0.25) 1%, rgba(181, 176, 248, 0.25) 50%, rgba(187, 143, 240, 0.25) 100%);
+  padding: 55px 0;
+}
+
+.content-top > .layout-flex > div:first-child {
+  gap: 10px;
+}
+
+
+/*이벤트 배너*/
+.swiper-event {
+  width: 420px;
+  height: 370px;
+  margin-left: 0;
+  color: white;
+}
+
+.swiper-event-box {
+  position: relative;
+}
+
+.swiper-event-pagination {
+  color: white;
+  position: absolute;
+  z-index: 5;
+  left: 365px;
+  width: auto;
+}
+
+
+/*자격증정보*/
+.mainInfo {
+  width: 550px;
+  height: 370px;
+  background: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 40px 45px 24px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.mainInfo .title, .mainChart .title {
+  font-weight: 500;
+  font-size: 1.1rem;
+}
+
+.txt-box {
+  font-size: 12px;
+  word-break: keep-all;
+  padding-left: 14px;
+}
+
+.txt-box > p:first-child {
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.txt-box p {
+  margin-bottom: 0.3rem;
+  font-weight: 300;
+  line-height: 15px;
+}
+
+.mainInfo .swiper-main-info {
+  width: 100%;
+  position: static;
+}
+
+.mainInfo .swiper-main-info .swiper-main-info-slide {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 32px 0;
+  padding: 32px 0;
+}
+
+
+/*기사 인기순위*/
+.mainChart {
+  width: 260px;
+  height: 370px;
+  background: #fff;
+  padding: 40px 30px 35px;
+  box-sizing: border-box;
+  position: relative;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.swiper-chart {
+  width: 100%;
+}
+
+.mainChart .chart-content {
+  padding: 25px 0;
+}
+
+.mainChart .hot-item {
+  font-size: 0.8rem;
+  line-height: 25px;
+}
+
+.mainChart .hot-item:before {
+  font-weight: bold;
+  width: 20px;
+  color: #bababa;
+  display: inline-block;
+}
+
+.mainChart .hot-item:nth-child(1):before {
+  content: '1';
+}
+
+.mainChart .hot-item:nth-child(2):before {
+  content: '2';
+}
+
+.mainChart .hot-item:nth-child(3):before {
+  content: '3';
+}
+
+.mainChart .hot-item:nth-child(4):before {
+  content: '4';
+}
+
+.mainChart .hot-item:nth-child(5):before {
+  content: '5';
+}
+
+.mainChart .hot-item:nth-child(6):before {
+  content: '6';
+}
+
+.mainChart .hot-item:nth-child(7):before {
+  content: '7';
+}
+
+.mainChart .hot-item:nth-child(8):before {
+  content: '8';
+}
+
+.mainChart .hot-item:nth-child(9):before {
+  content: '9';
+}
+
+.mainChart .hot-item:nth-child(10):before {
+  content: '10';
+}
+
+.mainChart .hot-item a {
+  color: inherit;
+}
+
+.mainChart .hot-item a:hover {
+  text-decoration: underline;
+}
+
+
+/*우측 상단 화살표 공통*/
+.corner-arrow-prev, .corner-arrow-next {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #dfdfdf;
+  color: #8e8cfd;
+  font-weight: 900;
+  text-align: center;
+  overflow: hidden;
+  background: #fff;
+  position: absolute;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.corner-arrow-prev {
+  right: 56px;
+}
+
+.corner-arrow-next {
+  right: 32px
+}
+
+
+/*중간 배너*/
+.content-banner {
+  margin: 30px 0;
+}
+
+.content-banner > .layout-width {
+  position: relative;
+}
+
+.swiper-banner {
+  margin: 0 16px;
+  text-align: center;
+}
+
+
+.content-banner .swiper-banner-prev, .content-banner .swiper-banner-next {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 24px;
+  cursor: pointer;
+}
+
+.content-banner .swiper-banner-prev {
+}
+
+.content-banner .swiper-banner-next {
+  right: 0;
+}
+
+
+/*HOT 키워드*/
+.tit {
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  font-size: 28px;
+  line-height: inherit;
+}
+
+.tit > img {
+  margin-right: 8px;
+}
+
+.hotList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.hotList > li {
+  width: 300px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-top-style: none;
+  border-radius: 10px;
+  position: relative;
+}
+
+.hotList li a {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  color: black;
+  box-sizing: border-box;
+}
+
+.hotList li a:hover {
+  position: absolute;
+  width: 100%;
+  height: 432px;
+  border: 2px solid transparent;
+  background: linear-gradient(to right, white, white), linear-gradient(135deg, #add0ff, #bc8ff0);
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+  z-index: 1;
+}
+
+.hotList li a:hover:after {
+  content: url(src/assets/images/common/plusB_con.png);
+  background: #bc8ff0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 13px 11px 10px 13px;
+  border-top-left-radius: 10px;
+}
+
+.hotList > li .imgBox img {
+  opacity: 0.2;
+}
+
+.hotList li:hover .imgBox img {
+  opacity: 0.9;
+}
+
+.hotList li:nth-child(1) .imgBox {
+  background: #e9b107;
+}
+
+.hotList li:nth-child(2) .imgBox {
+  background: #4b3962;
+}
+
+.hotList li:nth-child(3) .imgBox {
+  background: #e16045;
+}
+
+.hotList li:nth-child(4) .imgBox {
+  background: #474756;
+}
+
+.hotList li:nth-child(5) .imgBox {
+  background: #305a7e;
+}
+
+.hotList li:nth-child(6) .imgBox {
+  background: #b13c2f;
+}
+
+.hotList li:nth-child(7) .imgBox {
+  background: #383f4e;
+}
+
+.imgBox {
+  position: relative;
+}
+
+.imgBox, .imgBox > img {
+  width: 100%;
+  height: 120px;
+}
+
+.hotList li .d-day {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  display: block;
+  width: 44px;
+  line-height: 19px;
+  text-align: center;
+  font-size: 1em;
+  color: #fff;
+  background: #9c57f5;
+  border-radius: 10px;
+}
+
+.hotList li .title {
+  font-size: 1.65em;
+  font-weight: bold;
+  color: #fff;
+  line-height: 60px;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  bottom: 0;
+  padding-left: 30px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hotList li .subTxt {
+  margin: 0 30px;
+  padding: 12px 0 20px;
+}
+
+.hotList li .subTxt p {
+  font-size: 0.9rem;
+  line-height: 2;
+  height: 28px;
+  color: #6e6e6e;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.hotList li .subTxt .date {
+  font-size: 0.8rem;
+  color: #f15959;
+}
+
+.hotList li .overTxt {
+  display: none;
+  margin: 0 30px;
+  padding-top: 30px;
+  border-top: 1px solid #e5e5e5;
+}
+
+.hotList li .overTxt p {
+  line-height: 1.5;
+  color: #242424;
+  text-overflow: ellipsis;
+}
+
+.hotList li a:hover .overTxt {
+  display: block;
+}

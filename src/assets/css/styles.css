@@ -1,0 +1,44 @@
+html, body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'malgun gothic', 'dotum', sans-serif;
+  background-color: #fff;
+}
+
+p {
+  font-family:  'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+  font-size: 100%;
+}
+
+
+button, input {
+  border-style: none;
+}
+
+button {
+  background-color: white;
+  cursor: pointer;
+}
+
+input, a {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.layout-flex {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 1250px;
+}
+
+.layout-width {
+  width: 1250px;
+}

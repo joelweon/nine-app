@@ -1,0 +1,156 @@
+<div class="content-top">
+  <div class="layout-flex">
+    <div class="layout-width flex">
+      <div class="swiper-event-box">
+        <swiper class="swiper-event" [config]="swiperMainFirst">
+          <ng-template swiperSlide>
+            <img src="/assets/images/common/banner/ai.png" alt="이벤트 배너">
+          </ng-template>
+          <ng-template swiperSlide>
+            <img src="/assets/images/common/banner/oxford.png" alt="이벤트 배너">
+          </ng-template>
+          <ng-template swiperSlide>
+            <img src="/assets/images/common/banner/question_talk.png" alt="이벤트 배너">
+          </ng-template>
+          <ng-template swiperSlide>
+            <img src="/assets/images/common/banner/review.png" alt="이벤트 배너">
+          </ng-template>
+        </swiper>
+        <div class="swiper-event-pagination"></div>
+      </div>
+
+      <div class="mainInfo flex">
+        <span class="swiper-main-info-prev corner-arrow-prev">&lt;</span>
+        <span class="swiper-main-info-next corner-arrow-next">&gt;</span>
+        <swiper class="swiper-main-info flex" [config]="swiperMainSecond">
+          <ng-template swiperSlide>
+            <p class="title">자격증정보</p>
+            <div class="swiper-main-info-slide">
+              <div class="flex w170">
+                <img src="/assets/images/main/inCrfc.png" alt="자격증정보">
+                <div class="txt-box">
+                  <p>자격증정보</p>
+                  <p>자격증정보의 모든 것</p>
+                </div>
+              </div>
+              <div class="flex w170">
+                <img src="/assets/images/main/iCrtfc.png" alt="계열별정보">
+                <div class="txt-box">
+                  <p>계열별정보</p>
+                  <p>자격증에 대하여 알려드립니다.</p>
+                </div>
+              </div>
+              <div class="flex w170">
+                <img src="/assets/images/main/sCrtfc.png" alt="자격증 공모전">
+                <div class="txt-box">
+                  <p>자격증 공모전</p>
+                  <p>자격증 관련 공모전 정보 확인하기</p>
+                </div>
+              </div>
+              <div class="flex w170">
+                <img src="/assets/images/main/rCrtfc.png" alt="시험접수안내">
+                <div class="txt-box">
+                  <p>시험접수안내</p>
+                  <p>필기/실기 기본접수안내</p>
+                </div>
+              </div>
+            </div>
+          </ng-template>
+        </swiper>
+        <img src="/assets/images/main/data_lab.png" alt="자넷 데이터랩 장착">
+      </div>
+
+      <div class="mainChart flex">
+        <span class="swiper-chart-prev corner-arrow-prev">&lt;</span>
+        <span class="swiper-chart-next corner-arrow-next">&gt;</span>
+        <swiper class="swiper-chart" [config]="swiperMainThird">
+          <ng-template swiperSlide>
+            <p class="title">기사 인기순위</p>
+            <ul class="chart-content">
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">전기기사</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">산업안전기사</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">위험물산업기사</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">전기산업기사</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">건축기사</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">건설안전기사</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">소방설비기사(전기분야)</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">제품디자인산업기사</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">건설기계정비산업기사</span></a>
+              </li>
+              <li class="hot-item">
+                <a routerLink="/"><span class="item">사출금형산업기사</span></a>
+              </li>
+            </ul>
+          </ng-template>
+        </swiper>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="layout-flex content-banner">
+  <div class="layout-width ">
+    <swiper class="swiper-banner" [config]="swiperBanner">
+      <ng-template swiperSlide>
+        <img src="/assets/images/main/sub_banner01.png" alt="가장 따기 쉬운 자격증">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="/assets/images/main/sub_banner02.png" alt="시험 없이 취득가능한 자격증">
+      </ng-template>
+      <ng-template swiperSlide>
+        <img src="/assets/images/main/sub_banner03.png" alt="이력서 칸 채우기용 자격증은 이제 그만! 전략적인 자격증 따기">
+      </ng-template>
+    </swiper>
+    <div class="swiper-banner-prev">&lt;</div>
+    <div class="swiper-banner-next">&gt;</div>
+  </div>
+</div>
+
+<div class="layout-flex content-hot-keyword">
+  <div class="layout-width">
+    <h3 class="tit flex">
+      <img src="/assets/images/main/hot_keyword.png" alt="hot image">
+      <span class="purple b700">HOT</span>
+      <span class="b700">키워드</span>
+      <span>TOP20</span>
+    </h3>
+    <ul class="hotList">
+      <li *ngFor="let data of keywordData;">
+        <a routerLink="">
+          <div class="">
+            <div class="imgBox">
+              <img src="/assets/images/main/licenseitem/{{data.imgName}}" alt="{{data.title}}">
+              <h5 class="d-day">D{{data.dDay}}</h5>
+              <h3 class="title">{{data.title}}</h3>
+            </div>
+          </div>
+          <div class="subTxt">
+            <p>시행기관 : {{data.licenseOrgan}}</p>
+            <p class="date" *ngIf="!!data.esRegdt">시험일 : {{data.esRegdt | date:'yyyy-MM-dd'}}</p>
+          </div>
+          <div class="overTxt">
+            <p><strong>유형:</strong>"제463회"</p>
+            <p><strong>접수기간:</strong>2022-04-25 ~ 30</p>
+          </div>
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>

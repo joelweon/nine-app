@@ -1,27 +1,53 @@
 # NineApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+## 테스트 환경 세팅
 
-## Development server
+### 1. [Node.js 설치](https://nodejs.org/en/download/)
+Angular를 실행하려면 현재 활성 LTS 버전이거나 유지보수 중인 LTS 버전의 Node.js가 필요합니다.  
+Angular 13.3.7 기준으로 필요한 "node" 버전은 아래중에 선택하면 됩니다.
+```
+>=12.20.0 & <13.0.0
+>=14.15.0 & <15.0.0
+>=16.10.0
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### 2. 의존성 패키지 설치
+- 해당 폴더에서 `npm i` 실행
 
-## Code scaffolding
+### 3. 서버 실행
+- `ng serve` 실행
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### 4. 브라우저 접속(크롬 권장)
+- URL 접속 `http://localhost:4200/`
 
-## Build
+## Angular version
+- 13.3.7.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 폴더 구조
+    .
+    ├── ...
+    ├── src                      # 워크스페이스 소스 파일
+    │   ├── app                  # 프로젝트 로직과 데이터를 관리
+    │   │    ├── contents        # 본문 내용
+    │   │    │      └── main     # 메인 페이지 본문
+    │   │    ├── footer          # 푸터
+    │   │    ├── app*.*          # 기본 메인 파일 (앱 최상위 컴포넌트)
+    │   │    └── header          # 헤더
+    │   ├── assets               # 이미지 파일이나 리소스 파일
+    │   ├── environments         # 환경에 맞게 적용될 빌드 환경설정 옵션 (개발/운영)
+    │   └── ...
+    └── ...
 
-## Running unit tests
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 추가한 외부 파일
+[normalize.css](https://necolas.github.io/normalize.css/)
+- 브라우저 간 일관성을 위한 css
 
-## Running end-to-end tests
+[reset.css](http://meyerweb.com/eric/tools/css/reset/)
+- 브라우저 간 일관성을 위한 css
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+[swiper](https://github.com/nolimits4web/swiper)
+- "swiper": "^8.2.2",
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+[폰트 추가](https://fonts.googleapis.com/css?family=Montserrat)
+- Noto Sans KR

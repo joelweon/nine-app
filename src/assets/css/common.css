@@ -1,0 +1,31 @@
+.none {
+  display: none;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.mr-auto {
+  margin-right: auto;
+}
+.ml-auto {
+  margin-left: auto;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.w170 {
+  width: 170px;
+}
+
+.b700 {
+  font-weight: 700;
+}
+
+.purple {
+  color: #8f45ef;
+}

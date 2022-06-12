@@ -27,7 +27,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/reset.css",
+              "src/assets/css/normalize.css",
+              "./node_modules/swiper/swiper-bundle.css",
+              "src/assets/css/font/font.css",
+              "src/assets/css/styles.css",
+              "src/assets/css/common.css"
             ],
             "scripts": []
           },
@@ -94,7 +99,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/assets/css/styles.css"
             ],
             "scripts": []
           }

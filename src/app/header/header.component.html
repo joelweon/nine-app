@@ -1,0 +1,96 @@
+<div id="header">
+  <div>
+    <img class="top-banner" src="/assets/images/common/header/top_banner_0715.png" alt="banner">
+  </div>
+  <div #headerBox class="layout-flex header-box" [ngClass]="{'fixed': isFixed}">
+    <div class="layout-width">
+      <div class="flex">
+        <button routerLink="/" class="logo">
+          <img src="/assets/images/common/header/logo.png" alt="logo"/>
+        </button>
+        <button routerLink="/" class="fix-logo none">
+          <img src="/assets/images/common/header/fix_logo.png" alt="logo"/>
+        </button>
+        <div [class.active]="searchInputFocus" class="hdSchWr border-gradient mr-auto">
+          <div class="search-form">
+            <label for="search-input"><span class="search-tit">통합검색</span></label>
+            <input #searchVal id="search-input" class="search-input" type="text" name="searchValue"
+                   maxlength="50" placeholder="자격증 꿀팁 보러가기 #취준 #취뽀"
+                   (keydown.enter)="searchEmitter.emit(searchVal.value)" (focus)="searchInputFocus = true">
+            <button type="button" (click)="searchEmitter.emit(searchVal.value)" class="searchBtn" value="검색">
+              <img src="/assets/images/common/header/mainSrchBtn.png" class="searchImg" alt="검색">
+            </button>
+          </div>
+        </div>
+        <div class="main-member">
+          <div>
+            <ul class="sign-up">
+              <a routerLink="/">
+                <li><span class="menu-icon"></span></li>
+                <li>회원가입</li>
+              </a>
+            </ul>
+            <ul class="sign-in">
+              <a routerLink="/">
+                <li><span class="menu-icon"></span></li>
+                <li>로그인</li>
+              </a>
+            </ul>
+            <ul class="company-svc">
+              <a routerLink="/">
+                <li><span class="menu-icon"></span></li>
+                <li><span>기업서비스</span></li>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gnb" class="layout-width">
+      <nav>
+        <ul class="flex">
+          <li>
+            <button (click)="isOpen = !isOpen">
+              <img class="menu-bar" src="/assets/images/common/header/gnb.png" alt="메뉴바">
+            </button>
+          </li>
+          <li><a routerLink="">Top100</a></li>
+          <li><a routerLink="">자격증정보</a></li>
+          <li><a routerLink="">어학/공무원</a></li>
+          <li><a routerLink="">자넷info</a></li>
+          <li><a routerLink="">자넷톡</a></li>
+          <li class="ml-auto">
+            <ul class="flex right-menu">
+              <li><a routerLink="" aria-label="우리동네학원"></a></li>
+              <li><a routerLink="" aria-label="커뮤니티"></a></li>
+              <li><a routerLink="" aria-label="자격증AI"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!--고정 헤더 검색-->
+    <div id="fixed-search">
+      <div class="hd-sub-sch">
+        <input type="text" class="sch-stx" (keydown.enter)="searchEmitter.emit(fixedSearchVal.value)" #fixedSearchVal
+               placeholder="검색어를 입력하세요." maxlength="20">
+        <button type="button" class="search-btn" (click)="searchEmitter.emit(fixedSearchVal.value)"></button>
+      </div>
+    </div>
+  </div>
+
+  <!--메뉴 오픈-->
+  <div [@openClose]="isOpen ? 'open' : 'closed'" id="gnb-menu" [ngClass]="{'fixed': isFixed}">
+    <ul>
+      <li *ngFor="let data of gnbInfo">
+        <ul>
+          <li *ngFor="let d of data; let i=index" [ngClass]="{'gnb-title': d.isTitle, 'gnb-sub': d.isSub}">
+            <a routerLink="{{d.router}}">{{d.name}}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
